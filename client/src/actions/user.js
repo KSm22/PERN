@@ -41,7 +41,7 @@ export const auth = () => {
                 dispatch(setUser(response.data.user));
             }
             localStorage.setItem('token', response.data.token);
-            console.log(response.data.user)
+            // console.log(response.data.user)
         } catch (e) {
             alert(e.response.data.message);
             localStorage.removeItem('token');
@@ -59,5 +59,17 @@ export const getUsers = () => {
         } catch (e) {
             alert(e.response.data.message);
         }
+    }
+};
+
+export const deleteUser = async (id) => {
+    try {
+        const response = await axios.post(`http://localhost:3002/api/users/delete/:id`, {
+            id
+        });
+
+        alert(response.data.message);
+    } catch (e) {
+        // console.log(e.response.data.message)
     }
 };

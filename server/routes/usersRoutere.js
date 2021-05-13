@@ -4,6 +4,6 @@ const roleMiddleware = require('../middleware/roleMiddleware');
 const controller = require('../controllers/usersController');
 
 router.get('/users', roleMiddleware(), controller.getUsers);
-router.post('/:id/delete', roleMiddleware(), controller.deleteUser);
+router.get('/delete/:id', controller.deleteUser);
 
 module.exports = router;

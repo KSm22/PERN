@@ -20,9 +20,10 @@ class UsersController {
             if (!user) {
                 return res.status(400).json({message: `Пользователь не найден`});
             }
+
             user.destroy();
-            res.json({message: `Пользователь ${user.email} удалён`});
-            // res.redirect('/users');
+            // res.json({message: `Пользователь ${user.email} удалён`});
+            res.redirect('http://localhost:3000/');
         } catch (e) {
             console.log(e)
         }
