@@ -29,7 +29,7 @@ class AuthController {
                 return res.status(400).json({message: "Пользователь с таким логином уже существует"})
             }
             const hashPassword = bcrypt.hashSync(password, 5);
-            const user = await User.create({email, password: hashPassword});
+            const user = await User.create({email, password: hashPassword, role: "ADMIN"});
             await fileService.createDir(new File({userId: user.id, name: ''}));
             return res.json({message: 'Пользователь зарегистрирован'});
         } catch (e) {
