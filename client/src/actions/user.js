@@ -53,7 +53,7 @@ export const auth = () => {
 export const getUsers = () => {
     return async dispatch => {
         try {
-            const response = await axios.get('http://localhost:3002/auth/users',
+            const response = await axios.get('http://localhost:3002/api/users/users',
                 {headers:{Authorization: `Bearer ${localStorage.getItem('token')}`}});
             dispatch(setUsers(response.data));
         } catch (e) {

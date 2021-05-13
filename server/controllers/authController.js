@@ -83,14 +83,7 @@ class AuthController {
         }
     }
 
-    async getUsers(req, res) {
-        try {
-            const users = await User.findAll();
-            res.json(users);
-        } catch (e) {
 
-        }
-    }
 }
 
 module.exports = new AuthController();
