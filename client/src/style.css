@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nav {
+    padding: 15px 0;
+    margin-bottom: 50px;
+}
+.nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-list__item{
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px;
+
+    font-size: 18px;
+    font-weight: 400;
+    color: #21507B;
+
+    cursor: pointer;
+}
+
+.btn {
+    margin: 0 auto;
+    width: 100%;
+
+    text-align: center;
+    color: #E4E4E4;
+    font-size: 24px;
+    font-weight: 500;
+
+    background-color: #559FE3;
+    border: none;
+    border-radius: 0.5em;
+
+    transition: 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+.btn:hover {
+    background-color: #2A71B2;
+}
+
+.btn-upload {
+    max-width: 300px;
+
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.btn-upload label{
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+
+    cursor: pointer;
+}
+.btn input[type="file"] {
+    display: none;
+}
+
+.file-content {
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 30px;
+
+    font-size: 18px;
+
+    background-color: #F4F4F4;
+    border: 1px solid #559FE3;
+}
+
+.file-list {
+    width: 50%;
+    padding: 15px;
+
+    background-color: #F4F4F4;
+}
+
+.file-list__item {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+    border-radius: 0;
+}
+
+.user-nav__inner {
+    margin-top: 15px;
+
+    width: 50%;
+}
+.user-nav {
+    display: flex;
+}
+
+.search-panel {
+    width: 100%;
+    height: 39px;
+    padding: 5px;
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    border: 1px solid #559FE3;
+}
+
+.download {
+    padding: 5px;
+    border-radius: 0;
+}
+
+.authorization {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.input {
+    padding: 5px;
+    margin: 10px 0;
+}
+
