@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {uploadFile} from "../../actions/file";
 import {useDispatch, useSelector} from "react-redux";
 

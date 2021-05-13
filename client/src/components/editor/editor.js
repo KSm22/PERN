@@ -5,7 +5,7 @@ import FileList from "../file-list/file-list";
 import SearchPanel from "../search-panel/search-panel";
 import DownloadPanel from "../download-file/download-file";
 import {useDispatch, useSelector} from "react-redux";
-import {getFiles, uploadFile} from "../../actions/file";
+import {getFiles} from "../../actions/file";
 
 const Editor = () => {
     const dispatch = useDispatch();

@@ -2,9 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {logout} from "../../reducer/userReducer";
+import {getUsers} from "../../actions/user";
 
 const Navigation = () => {
     const isAuth = useSelector(state => state.user.isAuth);
+    const isAdmin = useSelector(state => state.user.isAdmin);
     const dispatch = useDispatch();
 
     return (
@@ -16,6 +18,7 @@ const Navigation = () => {
                 <li className="nav-list__item">
                     <Link to="/editor">Editor</Link>
                 </li>
+                {isAdmin && <li className="nav-list__item"><Link to="/users" onClick={() => dispatch(getUsers())}>Users</Link></li>}
 
                 {!isAuth && <li className="nav-list__item"><NavLink to="/login">Войти</NavLink></li> }
                 {!isAuth && <li className="nav-list__item"><NavLink to="/registration">Регистрация</NavLink></li> }

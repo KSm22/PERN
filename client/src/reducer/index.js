@@ -3,11 +3,13 @@ import fileReducer from "./fileReducer";
 import {composeWithDevTools} from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import userReducer from "./userReducer";
+import peopleReducer from "./popleReduser";
 
 
 const rootReducer = combineReducers({
     files: fileReducer,
-    user: userReducer
+    user: userReducer,
+    users: peopleReducer
 });
 
 

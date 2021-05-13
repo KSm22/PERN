@@ -8,9 +8,11 @@ import Registration from "../authorization/Registration";
 import Login from "../authorization/login";
 import {useDispatch, useSelector} from "react-redux";
 import {auth} from "../../actions/user";
+import UsersList from "../user-list/UsersList";
 
 const App = () => {
     const isAuth = useSelector(state => state.user.isAuth);
+    const isAdmin = useSelector(state => state.user.isAdmin);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -33,6 +35,7 @@ const App = () => {
                                component={UploadButton}
                                exact/>
                         <Route path="/editor" component={Editor}/>
+                        {isAdmin && <Route path="/users" component={UsersList} />}
                         <Redirect to='/'/>
                     </Switch>
                 }
