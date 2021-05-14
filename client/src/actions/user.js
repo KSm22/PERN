@@ -22,10 +22,6 @@ export const login = (email, password) => {
                 password
             });
 
-            /*if (response.data.user.role === "USER") {
-                dispatch(setUser(response.data.user));
-            }   */
-
             if (response.data.user.role === "ADMIN"){
                 dispatch(setAdmin(response.data.user));
             } else {
