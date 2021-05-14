@@ -22,9 +22,14 @@ export const login = (email, password) => {
                 password
             });
 
-            dispatch(setUser(response.data.user));
+            /*if (response.data.user.role === "USER") {
+                dispatch(setUser(response.data.user));
+            }   */
+
             if (response.data.user.role === "ADMIN"){
                 dispatch(setAdmin(response.data.user));
+            } else {
+                dispatch(setUser(response.data.user));
             }
             localStorage.setItem('token', response.data.token);
             console.log(response.data)
