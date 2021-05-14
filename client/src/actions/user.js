@@ -44,9 +44,8 @@ export const auth = () => {
                 dispatch(setAdmin(response.data.user));
             }
             localStorage.setItem('token', response.data.token);
-            // console.log(response.data.user)
         } catch (e) {
-            alert(e.response.data.message);
+            // alert(e.response.data.message);
             localStorage.removeItem('token');
         }
     }
