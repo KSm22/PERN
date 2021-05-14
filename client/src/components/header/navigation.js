@@ -18,7 +18,10 @@ const Navigation = () => {
                 <li className="nav-list__item">
                     <Link to="/editor">Editor</Link>
                 </li>
-                {isAdmin && <li className="nav-list__item"><Link to="/users" onClick={() => dispatch(getUsers())}>Users</Link></li>}
+
+                {isAdmin && <li className="nav-list__item">
+                    <NavLink to="/users" onClick={() => dispatch(getUsers())}>Users</NavLink>
+                </li>}
 
                 {!isAuth && <li className="nav-list__item"><NavLink to="/login">Войти</NavLink></li> }
                 {!isAuth && <li className="nav-list__item"><NavLink to="/registration">Регистрация</NavLink></li> }

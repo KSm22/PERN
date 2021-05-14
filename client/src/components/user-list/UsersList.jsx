@@ -4,7 +4,7 @@ import UserItem from "./UserItem";
 
 const UsersList = () => {
     const users = useSelector(state => state.users.users).map(user => <UserItem user={user} key={user.id}/>);
-    // const files = useSelector(state => state.files.files).map(file => <File file={file} key={file.id}/>);
+
     return (
         <div className="users">
             <ul className="users-list">
